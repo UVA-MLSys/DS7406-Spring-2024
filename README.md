@@ -1,7 +1,7 @@
 # Introduction
 This repository is created for the course DS7406 - Machine Learning Systems. 
 
-**Note :** The previous repository [MLSystems](https://github.com/UVA-MLSys/DS7406) has been copied to this one and the that one would no longer be maintained. We'll sent invitations to all current members to join as a collaborator. If you haven't received one, please let us know.
+**Note :** The previous repository [MLSystems](https://github.com/UVA-MLSys/DS7406) has been copied to this one and the old one would no longer be maintained. We'll sent invitations to all current members to join as a collaborator. If you haven't received one, please let us know.
 
 **Instructor**
 
