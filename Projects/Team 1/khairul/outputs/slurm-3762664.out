@@ -1,0 +1,65 @@
+/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/nn/onnx_converter.py:164: UserWarning: The given NumPy array is not writeable, and PyTorch does not support non-writeable tensors. This means you can write to the underlying (supposedly non-writeable) NumPy array using the tensor. You may want to copy the array to protect its data or make it writeable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  ../torch/csrc/utils/tensor_numpy.cpp:189.)
+  param = torch.from_numpy(numpy_helper.to_array(node))
+Tesla P100-PCIE-12GB
+Using cuda backend.
+Shape: Train data torch.Size([60000, 28, 28]), test data torch.Size([10000, 28, 28]).
+Train Epoch: 1 [0/60000 (0%)]	Loss: 2.292798
+Train Epoch: 1 [6400/60000 (11%)]	Loss: 0.673470
+Train Epoch: 1 [12800/60000 (21%)]	Loss: 0.510805
+Train Epoch: 1 [19200/60000 (32%)]	Loss: 0.491170
+Train Epoch: 1 [25600/60000 (43%)]	Loss: 0.322921
+Train Epoch: 1 [32000/60000 (53%)]	Loss: 0.256683
+Train Epoch: 1 [38400/60000 (64%)]	Loss: 0.338081
+Train Epoch: 1 [44800/60000 (75%)]	Loss: 0.352366
+Train Epoch: 1 [51200/60000 (85%)]	Loss: 0.251272
+Train Epoch: 1 [57600/60000 (96%)]	Loss: 0.174378
+
+Train set: Average loss: 432.9095, Elapsed time 12.1600 seconds.
+
+Test set: Average loss: 0.0002, Accuracy: 94.2500%, Elapsed time 1.6474 seconds.
+Train Epoch: 2 [0/60000 (0%)]	Loss: 0.332285
+Train Epoch: 2 [6400/60000 (11%)]	Loss: 0.378143
+Train Epoch: 2 [12800/60000 (21%)]	Loss: 0.208595
+Train Epoch: 2 [19200/60000 (32%)]	Loss: 0.219608
+Train Epoch: 2 [25600/60000 (43%)]	Loss: 0.276218
+Train Epoch: 2 [32000/60000 (53%)]	Loss: 0.129670
+Train Epoch: 2 [38400/60000 (64%)]	Loss: 0.136093
+Train Epoch: 2 [44800/60000 (75%)]	Loss: 0.272899
+Train Epoch: 2 [51200/60000 (85%)]	Loss: 0.075101
+Train Epoch: 2 [57600/60000 (96%)]	Loss: 0.093454
+
+Train set: Average loss: 189.3046, Elapsed time 12.0442 seconds.
+
+Test set: Average loss: 0.0001, Accuracy: 95.6100%, Elapsed time 1.6383 seconds.
+Train time (seconds): total 24.2042, mean 12.1021.
+ Test time (seconds): total 3.28568, mean 1.64284.
+Traceback (most recent call last):
+  File "/u/mi3se/Git/Team1/benchmark.py", line 284, in <module>
+    test_loss, elapsed_time, accuracy = test_encrypted(model_enc, device, test_loader)
+  File "/u/mi3se/Git/Team1/benchmark.py", line 267, in test_encrypted
+    output = model(data)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/nn/module.py", line 50, in __call__
+    return self.forward(*args, **kwargs)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/nn/module.py", line 532, in forward_function
+    return object.__getattribute__(self, name)(*tuple(args), **kwargs)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/nn/module.py", line 714, in forward
+    output = module(input)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/nn/module.py", line 50, in __call__
+    return self.forward(*args, **kwargs)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/nn/module.py", line 532, in forward_function
+    return object.__getattribute__(self, name)(*tuple(args), **kwargs)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/nn/module.py", line 1967, in forward
+    x = func(*args, **kwargs)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/cryptensor.py", line 338, in autograd_forward
+    return self.__getattribute__(name)(*args, **kwargs)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/mpc/mpc.py", line 339, in binary_wrapper_function
+    result._tensor = getattr(result._tensor, name)(value, *args, **kwargs)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/mpc/primitives/arithmetic.py", line 494, in conv2d
+    return self._arithmetic_function(kernel, "conv2d", **kwargs)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/mpc/primitives/arithmetic.py", line 384, in _arithmetic_function
+    getattr(protocol, op)(result, y, *args, **kwargs).share.data
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/mpc/primitives/beaver.py", line 102, in conv2d
+    return __beaver_protocol("conv2d", x, y, **kwargs)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/mpc/primitives/beaver.py", line 48, in __beaver_protocol
+    raise ValueError(f"x lives on device {x.device} but y on device {y.device}")
+ValueError: x lives on device cuda:0 but y on device cpu

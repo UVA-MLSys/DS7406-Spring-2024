@@ -1,0 +1,125 @@
+/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/nn/onnx_converter.py:164: UserWarning: The given NumPy array is not writeable, and PyTorch does not support non-writeable tensors. This means you can write to the underlying (supposedly non-writeable) NumPy array using the tensor. You may want to copy the array to protect its data or make it writeable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  ../torch/csrc/utils/tensor_numpy.cpp:189.)
+  param = torch.from_numpy(numpy_helper.to_array(node))
+posix.uname_result(sysname='Linux', nodename='cheetah02', release='3.10.0-1160.2.2.el7.x86_64', version='#1 SMP Tue Oct 20 16:53:08 UTC 2020', machine='x86_64')
+Cuda device NVIDIA GeForce RTX 2080 Ti
+Using cuda backend.
+Shape: Train data torch.Size([60000, 28, 28]), test data torch.Size([10000, 28, 28]).
+Train Epoch: 1 [0/60000 (0%)]	Loss: 2.317987
+Train Epoch: 1 [12800/60000 (21%)]	Loss: 2.127649
+Train Epoch: 1 [25600/60000 (43%)]	Loss: 1.799047
+Train Epoch: 1 [38400/60000 (64%)]	Loss: 1.151360
+Train Epoch: 1 [51200/60000 (85%)]	Loss: 0.735485
+
+Train set: Average loss: 1424.0961, Elapsed time 7.6737 seconds.
+
+Test: Average loss: 0.0044, Accuracy: 86.0700%, Elapsed time 1.0513 seconds.
+Train Epoch: 2 [0/60000 (0%)]	Loss: 0.561295
+Train Epoch: 2 [12800/60000 (21%)]	Loss: 0.582420
+Train Epoch: 2 [25600/60000 (43%)]	Loss: 0.627114
+Train Epoch: 2 [38400/60000 (64%)]	Loss: 0.186887
+Train Epoch: 2 [51200/60000 (85%)]	Loss: 0.477641
+
+Train set: Average loss: 476.9370, Elapsed time 7.6758 seconds.
+
+Test: Average loss: 0.0028, Accuracy: 90.1000%, Elapsed time 1.0528 seconds.
+Train Epoch: 3 [0/60000 (0%)]	Loss: 0.432928
+Train Epoch: 3 [12800/60000 (21%)]	Loss: 0.511703
+Train Epoch: 3 [25600/60000 (43%)]	Loss: 0.458167
+Train Epoch: 3 [38400/60000 (64%)]	Loss: 0.432142
+Train Epoch: 3 [51200/60000 (85%)]	Loss: 0.300260
+
+Train set: Average loss: 370.3476, Elapsed time 7.6621 seconds.
+
+Test: Average loss: 0.0024, Accuracy: 91.4000%, Elapsed time 1.0504 seconds.
+Train Epoch: 4 [0/60000 (0%)]	Loss: 0.419390
+Train Epoch: 4 [12800/60000 (21%)]	Loss: 0.199435
+Train Epoch: 4 [25600/60000 (43%)]	Loss: 0.335029
+Train Epoch: 4 [38400/60000 (64%)]	Loss: 0.340348
+Train Epoch: 4 [51200/60000 (85%)]	Loss: 0.239835
+
+Train set: Average loss: 321.9042, Elapsed time 7.6709 seconds.
+
+Test: Average loss: 0.0021, Accuracy: 92.5000%, Elapsed time 1.0520 seconds.
+Train Epoch: 5 [0/60000 (0%)]	Loss: 0.340110
+Train Epoch: 5 [12800/60000 (21%)]	Loss: 0.293735
+Train Epoch: 5 [25600/60000 (43%)]	Loss: 0.305826
+Train Epoch: 5 [38400/60000 (64%)]	Loss: 0.379313
+Train Epoch: 5 [51200/60000 (85%)]	Loss: 0.273277
+
+Train set: Average loss: 289.1783, Elapsed time 7.6583 seconds.
+
+Test: Average loss: 0.0019, Accuracy: 92.9500%, Elapsed time 1.0532 seconds.
+Train Epoch: 6 [0/60000 (0%)]	Loss: 0.201739
+Train Epoch: 6 [12800/60000 (21%)]	Loss: 0.270688
+Train Epoch: 6 [25600/60000 (43%)]	Loss: 0.258872
+Train Epoch: 6 [38400/60000 (64%)]	Loss: 0.440061
+Train Epoch: 6 [51200/60000 (85%)]	Loss: 0.230111
+
+Train set: Average loss: 261.5468, Elapsed time 7.6622 seconds.
+
+Test: Average loss: 0.0017, Accuracy: 93.7700%, Elapsed time 1.0503 seconds.
+Train Epoch: 7 [0/60000 (0%)]	Loss: 0.173800
+Train Epoch: 7 [12800/60000 (21%)]	Loss: 0.199512
+Train Epoch: 7 [25600/60000 (43%)]	Loss: 0.165685
+Train Epoch: 7 [38400/60000 (64%)]	Loss: 0.183389
+Train Epoch: 7 [51200/60000 (85%)]	Loss: 0.212121
+
+Train set: Average loss: 242.5570, Elapsed time 7.6639 seconds.
+
+Test: Average loss: 0.0016, Accuracy: 94.1600%, Elapsed time 1.0493 seconds.
+Train Epoch: 8 [0/60000 (0%)]	Loss: 0.155156
+Train Epoch: 8 [12800/60000 (21%)]	Loss: 0.529016
+Train Epoch: 8 [25600/60000 (43%)]	Loss: 0.185890
+Train Epoch: 8 [38400/60000 (64%)]	Loss: 0.206292
+Train Epoch: 8 [51200/60000 (85%)]	Loss: 0.217262
+
+Train set: Average loss: 226.4991, Elapsed time 7.6347 seconds.
+
+Test: Average loss: 0.0014, Accuracy: 94.5500%, Elapsed time 1.0479 seconds.
+Train Epoch: 9 [0/60000 (0%)]	Loss: 0.162470
+Train Epoch: 9 [12800/60000 (21%)]	Loss: 0.108996
+Train Epoch: 9 [25600/60000 (43%)]	Loss: 0.234422
+Train Epoch: 9 [38400/60000 (64%)]	Loss: 0.282007
+Train Epoch: 9 [51200/60000 (85%)]	Loss: 0.259113
+
+Train set: Average loss: 211.9282, Elapsed time 7.6708 seconds.
+
+Test: Average loss: 0.0013, Accuracy: 95.0200%, Elapsed time 1.0481 seconds.
+Train Epoch: 10 [0/60000 (0%)]	Loss: 0.217892
+Train Epoch: 10 [12800/60000 (21%)]	Loss: 0.230730
+Train Epoch: 10 [25600/60000 (43%)]	Loss: 0.239284
+Train Epoch: 10 [38400/60000 (64%)]	Loss: 0.333233
+Train Epoch: 10 [51200/60000 (85%)]	Loss: 0.136769
+
+Train set: Average loss: 199.9109, Elapsed time 7.6279 seconds.
+
+Test: Average loss: 0.0013, Accuracy: 95.3600%, Elapsed time 1.0456 seconds.
+Train time (seconds): total 76.6001, mean 7.66001.
+ Test time (seconds): total 10.5009, mean 1.05009.
+   Epoch  Train loss  Test loss  Train time  Test time
+0      1    1.519846   0.004407    7.673749   1.051297
+1      2    0.509004   0.002775    7.675757   1.052825
+2      3    0.395248   0.002376    7.662057   1.050443
+3      4    0.343548   0.002072    7.670873   1.051984
+4      5    0.308621   0.001860    7.658251   1.053228
+5      6    0.279132   0.001667    7.662197   1.050260
+6      7    0.258866   0.001575    7.663861   1.049308
+7      8    0.241728   0.001431    7.634722   1.047855
+8      9    0.226177   0.001341    7.670783   1.048098
+9     10    0.213352   0.001260    7.627887   1.045600
+
+Running test 5 times.
+Run 1, Elapsed time 1.2405 seconds.
+Run 2, Elapsed time 1.0084 seconds.
+Run 3, Elapsed time 0.9796 seconds.
+Run 4, Elapsed time 0.9803 seconds.
+Run 5, Elapsed time 0.9819 seconds.
+
+Encrypted Test: Average loss: 0.0016, Accuracy: 95.3600%, Elapsed time 49.5189 seconds.
+
+Running encrypted test 5 times.
+Run 1: Elapsed time 38.6458 seconds.
+Run 2: Elapsed time 38.8632 seconds.
+Run 3: Elapsed time 38.9319 seconds.
+Run 4: Elapsed time 39.1244 seconds.
+Run 5: Elapsed time 39.9440 seconds.

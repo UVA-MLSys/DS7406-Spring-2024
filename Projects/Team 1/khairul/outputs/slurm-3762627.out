@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/u/mi3se/Git/Team1/benchmark.py", line 31, in <module>
+    import crypten
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/__init__.py", line 20, in <module>
+    import crypten.nn  # noqa: F401
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/nn/__init__.py", line 74, in <module>
+    from .onnx_converter import from_onnx, from_pytorch, from_tensorflow, TF_AND_TF2ONNX
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/nn/onnx_converter.py", line 15, in <module>
+    import torch.onnx.symbolic_registry as sym_registry
+ModuleNotFoundError: No module named 'torch.onnx.symbolic_registry'
