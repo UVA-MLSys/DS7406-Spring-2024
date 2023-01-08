@@ -17,3 +17,5 @@ conda activate crypten
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/anaconda3/envs/crypten/lib
 python mnist_train.py
+
+# NOTE: this is for UVA CS server
