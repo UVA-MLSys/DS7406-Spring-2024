@@ -27,8 +27,8 @@ Please run the UNETFinal_New_IanL.ipynb notebook under the Code dir to get the r
 ### Which model to run? (comment out the model you want to run) 
 - model=createSeparableModel(input_tensor, bnorm_axis, n_filters, drop_rate, drop_train)
 - model=createModel(input_tensor, bnorm_axis, n_filters, drop_rate, drop_train)
-- model=reateDilatedModel(input_tensor, bnorm_axis, n_filters, drop_rate, drop_train, dilation)
-- model= createPyramidDilatedModel(input_tensor, bnorm_axis, n_filters, drop_rate, drop_train)
+- model=createDilatedModel(input_tensor, bnorm_axis, n_filters, drop_rate, drop_train, dilation)
+- model=createPyramidDilatedModel(input_tensor, bnorm_axis, n_filters, drop_rate, drop_train)
 - model=createDepthwiseModel(input_tensor, bnorm_axis, n_filters, drop_rate, drop_train) # Depthwise model is not working
 
 ## Important (hyper)parameters 
