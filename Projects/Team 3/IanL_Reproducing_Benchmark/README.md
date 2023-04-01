@@ -1,10 +1,8 @@
 ## This Purpose of Having This Folder 
 This folder is created to document all the necessary steps, code and data to reproduce the results for the EoE project.
 
-
 ## Code in Jupyter Notebooks
-
-
+Please run the UNETFinal_New_IanL.ipynb notebook under the Code dir to get the results shown in the paper. This notebook can be run on Google Colab or Rivanna. Errors of OOM or Device Exhausted occasionally happen if running the notebook on Google Colab. Rivanna is more trouble-free.
 
 ## Data 
 - Data is stored on Google Drive. Due to confidential and IP concerns, please contact Kevin Lin(pex7ps), Jason Wang(jyw5hw) for permission to access data.
