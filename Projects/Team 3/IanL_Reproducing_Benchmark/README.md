@@ -39,9 +39,3 @@ This folder is created to document all the necessary steps, code and data to rep
 - drop_rate = 0.5
 - Batch_size = 4 and 5 (unclear comments)
 - dilation = 2, 4, 8, or 16 this only needs to be modified when running the dilated models.
-
-
-
-
-
-## Future Work and Plans
