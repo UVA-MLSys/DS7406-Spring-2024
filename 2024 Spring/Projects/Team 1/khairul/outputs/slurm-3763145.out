@@ -1,0 +1,59 @@
+/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/nn/onnx_converter.py:164: UserWarning: The given NumPy array is not writeable, and PyTorch does not support non-writeable tensors. This means you can write to the underlying (supposedly non-writeable) NumPy array using the tensor. You may want to copy the array to protect its data or make it writeable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  ../torch/csrc/utils/tensor_numpy.cpp:189.)
+  param = torch.from_numpy(numpy_helper.to_array(node))
+Tesla P100-PCIE-12GB
+Using cuda backend.
+Shape: Train data torch.Size([60000, 28, 28]), test data torch.Size([10000, 28, 28]).
+Train Epoch: 1 [0/60000 (0%)]	Loss: 2.301038
+Train Epoch: 1 [6400/60000 (11%)]	Loss: 0.530881
+Train Epoch: 1 [12800/60000 (21%)]	Loss: 0.372670
+Train Epoch: 1 [19200/60000 (32%)]	Loss: 0.319936
+Train Epoch: 1 [25600/60000 (43%)]	Loss: 0.432833
+Train Epoch: 1 [32000/60000 (53%)]	Loss: 0.341460
+Train Epoch: 1 [38400/60000 (64%)]	Loss: 0.246571
+Train Epoch: 1 [44800/60000 (75%)]	Loss: 0.266942
+Train Epoch: 1 [51200/60000 (85%)]	Loss: 0.108786
+Train Epoch: 1 [57600/60000 (96%)]	Loss: 0.253560
+
+Train set: Average loss: 412.3369, Elapsed time 12.1049 seconds.
+
+Test set: Average loss: 0.0002, Accuracy: 93.8500%, Elapsed time 1.9515 seconds.
+Train time (seconds): total 12.1049, mean 12.1049.
+ Test time (seconds): total 1.95147, mean 1.95147.
+Traceback (most recent call last):
+  File "/u/mi3se/Git/Team1/benchmark.py", line 288, in <module>
+    test_loss, elapsed_time, accuracy = test_encrypted(model_enc, device, test_loader)
+  File "/u/mi3se/Git/Team1/benchmark.py", line 270, in test_encrypted
+    output = model(data)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/nn/module.py", line 50, in __call__
+    return self.forward(*args, **kwargs)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/nn/module.py", line 532, in forward_function
+    return object.__getattribute__(self, name)(*tuple(args), **kwargs)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/nn/module.py", line 714, in forward
+    output = module(input)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/nn/module.py", line 50, in __call__
+    return self.forward(*args, **kwargs)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/nn/module.py", line 532, in forward_function
+    return object.__getattribute__(self, name)(*tuple(args), **kwargs)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/nn/module.py", line 1967, in forward
+    x = func(*args, **kwargs)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/cryptensor.py", line 338, in autograd_forward
+    return self.__getattribute__(name)(*args, **kwargs)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/mpc/mpc.py", line 339, in binary_wrapper_function
+    result._tensor = getattr(result._tensor, name)(value, *args, **kwargs)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/mpc/primitives/arithmetic.py", line 494, in conv2d
+    return self._arithmetic_function(kernel, "conv2d", **kwargs)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/mpc/primitives/arithmetic.py", line 384, in _arithmetic_function
+    getattr(protocol, op)(result, y, *args, **kwargs).share.data
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/mpc/primitives/beaver.py", line 102, in conv2d
+    return __beaver_protocol("conv2d", x, y, **kwargs)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/mpc/primitives/beaver.py", line 82, in __beaver_protocol
+    c._tensor += getattr(torch, op)(epsilon, b._tensor, *args, **kwargs)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/cuda/cuda_tensor.py", line 99, in __torch_function__
+    return HANDLED_FUNCTIONS[func](*args, **kwargs)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/cuda/cuda_tensor.py", line 297, in conv2d
+    return CUDALongTensor.__patched_conv_ops(
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/cuda/cuda_tensor.py", line 223, in __patched_conv_ops
+    return CUDALongTensor.__decode_as_int64(z_encoded, nb)
+  File "/u/mi3se/.local/lib/python3.9/site-packages/crypten-0.4.0-py3.9.egg/crypten/cuda/cuda_tensor.py", line 184, in __decode_as_int64
+    result = torch.index_select(x, 0, indices)
+RuntimeError: CUDA out of memory. Tried to allocate 1.69 GiB (GPU 0; 11.91 GiB total capacity; 8.02 GiB already allocated; 869.25 MiB free; 10.11 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
